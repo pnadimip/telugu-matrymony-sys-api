@@ -1,0 +1,41 @@
+#%RAML 1.0
+title: telugu-matrymony-sys-api
+
+/brideInfo:
+  post:
+    body:
+      application/json:
+        example:
+          {
+            "name": "prasad",
+            "job": "IT",
+            "Salary": 120000,
+            "desigantion": "SSE",
+            "DOB": "12-05-1991",
+            "HigherQualification": "MCA",
+            "address": "Anantapur"
+          }
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "message": "welcome to Telugu Matrymony, please look for your best partner here"
+              }
+      400:
+        body:
+          application/json:
+            example:
+              {
+                "message" : "Please provide information to look for you partner, your missing some mandate info"
+              }
+      405:
+        body:
+          application/json:
+            example:
+              {
+                "message" : "your providing wrong method instead of POST"
+              }
+            
+              
